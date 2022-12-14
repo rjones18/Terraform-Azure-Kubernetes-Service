@@ -9,7 +9,7 @@ resource "azurerm_network_security_group" "web_vmnic_nsg" {
 
 # Resource-2: Associate NSG and Linux VM NIC
 resource "azurerm_network_interface_security_group_association" "web_vmnic_nsg_associate" {
-  depends_on = [ azurerm_network_security_rule.web_vmnic_nsg_rule_inbound]
+  depends_on = [ azurerm_network_security_rule.web_vmnic_nsg_rule_inbound]  
   network_interface_id      = azurerm_network_interface.web_linuxvm_nic.id
   network_security_group_id = azurerm_network_security_group.web_vmnic_nsg.id
 }
@@ -39,6 +39,4 @@ resource "azurerm_network_security_rule" "web_vmnic_nsg_rule_inbound" {
   network_security_group_name = azurerm_network_security_group.web_vmnic_nsg.name
 }
 */
-
-
 
