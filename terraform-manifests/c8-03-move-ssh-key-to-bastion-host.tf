@@ -1,4 +1,4 @@
-/*
+
 # Create a Null Resource and Provisioners
 resource "null_resource" "name" {
   depends_on = [azurerm_linux_virtual_machine.bastion_host_linuxvm]
@@ -25,4 +25,3 @@ resource "null_resource" "name" {
 
 # Creation Time Provisioners - By default they are created during resource creations (terraform apply)
 # Destory Time Provisioners - Will be executed during "terraform destroy" command (when = destroy)
-*/
