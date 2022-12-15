@@ -4,7 +4,6 @@ resource "azurerm_subnet" "websubnet" {
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
   address_prefixes     = var.web_subnet_address  
-  service_endpoints = [ "Microsoft.Sql" ]
 }
 
 # Resource-2: Create Network Security Group (NSG)
@@ -27,8 +26,7 @@ locals {
   web_inbound_ports_map = {
     "100" : "80", # If the key starts with a number, you must use the colon syntax ":" instead of "="
     "110" : "443",
-    "120" : "22", 
-    "130" : "8080"
+    "120" : "22"
   } 
 }
 ## NSG Inbound Rule for WebTier Subnets
