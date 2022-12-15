@@ -70,3 +70,15 @@ variable "bastion_subnet_address" {
 
 
 
+# Application Gateway Subnet Name
+variable "ag_subnet_name" {
+  description = "Virtual Network Application Gateway Subnet Name"
+  type = string
+  default = "agsubnet"
+}
+# Application Gateway Subnet Address Space
+variable "ag_subnet_address" {
+  description = "Virtual Network Application Gateway Subnet Address Spaces"
+  type = list(string)
+  default = ["10.0.51.0/24"]
+}

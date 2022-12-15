@@ -1,3 +1,4 @@
+
 # Create a Null Resource and Provisioners
 resource "null_resource" "name" {
   depends_on = [azurerm_linux_virtual_machine.bastion_host_linuxvm]
