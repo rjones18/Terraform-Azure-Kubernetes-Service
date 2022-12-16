@@ -15,7 +15,7 @@ terraform {
       version = ">= 3.0"
     }    
   }
-}
+
 
 # Terraform State Storage to Azure Storage Container
   backend "azurerm" {
@@ -23,7 +23,8 @@ terraform {
     storage_account_name  = "regterraformstate201"
     container_name        = "tfstatefiles"
     key                   = "dev-terraform.tfstate"
-  }  
+  } 
+} 
 
 # Provider Block
 provider "azurerm" {
