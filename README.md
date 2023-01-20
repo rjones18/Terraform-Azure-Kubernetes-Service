@@ -6,4 +6,4 @@ Website URL: http://redhat.azure.vsystems.online (Not currently Deployed)
 
 The construction of the website broken down into the architecture below:
 
-![terraform-app](https://github.com/rjones18/Images/blob/main/azure-devops-terraform.png)
+![terraform-app](https://github.com/rjones18/Images/blob/main/Azure%20Kubernetes.png)
